@@ -83,11 +83,15 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
 }
 
 .about-me-photo {
     flex: 0 0 200px; /* Fixed width for photo container */
-    margin-right: 20px;
+    margin: 20px 0 0 20px; /* Add margin to adjust the position */
+    position: relative;
+    top: 20px; /* Move the image down */
+    right: -20px; /* Move the image to the right */
 }
 
 .about-me-photo img {
@@ -122,6 +126,8 @@ main {
 
     .about-me-photo {
         margin-bottom: 20px;
+        top: 0; /* Reset top position for mobile */
+        right: 0; /* Reset right position for mobile */
     }
 
     .about-me-photo img {
