@@ -80,13 +80,13 @@ main {
 
 .video {
     margin: 15px;
-    flex: 1 1 calc(50% - 30px); /* Adjust width for two videos per row on mobile */
-    max-width: calc(50% - 30px); /* Limit video width for two videos per row */
+    flex: 1 1 45%; /* Two videos per row on desktop */
+    max-width: 45%; /* Limit width for better spacing */
 }
 
 .video iframe {
     width: 100%; /* Ensure videos fill their container */
-    height: 200px; /* Set a fixed height for better visibility on mobile */
+    height: 180px; /* Fixed height for better fit on mobile */
 }
 
 @media (max-width: 768px) {
@@ -116,12 +116,12 @@ main {
     }
 
     .video {
-        flex: 1 1 100%; /* Full width for videos on smaller screens */
+        flex: 1 1 100%; /* Full width for videos on mobile */
         max-width: 100%;
         margin: 15px 0; /* Adjust margin for better spacing */
     }
 
     .video iframe {
-        height: 180px; /* Reduce height for better fit on mobile */
+        height: 140px; /* Reduce height further for better fit on mobile */
     }
 }
