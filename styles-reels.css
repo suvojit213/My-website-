@@ -1,0 +1,13 @@
+/* Reset default margin and padding */
+.instagram-embed {
+    margin-top: 20px;
+}
+
+.instagram-embed blockquote.instagram-media {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.instagram-embed script {
+    margin-top: 20px;
+}
