@@ -80,8 +80,8 @@ main {
 
 .video {
     margin: 15px;
-    flex: 1 1 45%; /* Two videos per row on desktop */
-    max-width: 45%; /* Limit width for better spacing */
+    flex: 1 1 calc(50% - 30px); /* Adjust width for two videos per row on desktop */
+    max-width: calc(50% - 30px); /* Limit video width for better spacing */
 }
 
 .video iframe {
@@ -116,12 +116,12 @@ main {
     }
 
     .video {
-        flex: 1 1 100%; /* Full width for videos on mobile */
-        max-width: 100%;
-        margin: 15px 0; /* Adjust margin for better spacing */
+        flex: 1 1 48%; /* Adjusted width for slightly larger videos per row on mobile */
+        max-width: 48%;
+        margin: 15px 1%; /* Adjust margin for better spacing */
     }
 
     .video iframe {
-        height: 140px; /* Reduce height further for better fit on mobile */
+        height: 160px; /* Adjusted height for better fit on mobile */
     }
 }
