@@ -1,10 +1,11 @@
-/* Global styles */
+/* Reset default browser styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Global styles specific to music.html */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
@@ -16,6 +17,8 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 20px 0;
+    min-height: 100vh; /* Ensures container stretches to full viewport height */
+    position: relative; /* Relative positioning for footer placement */
 }
 
 header {
@@ -93,7 +96,7 @@ footer {
     padding: 10px 0;
     background-color: #1d1d1d;
     color: #ffffff;
-    position: relative; /* Ensure the footer stays at the bottom */
+    position: absolute; /* Absolute positioning to stick to bottom */
     bottom: 0;
     width: 100%;
 }
