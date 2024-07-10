@@ -101,3 +101,14 @@ main {
     height: auto; /* Allow iframe height to adjust based on width */
     min-height: 250px; /* Minimum height for visibility */
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 0 5px;
+    }
+}
