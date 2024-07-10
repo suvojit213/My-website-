@@ -90,7 +90,7 @@ main {
 
 .video {
     margin: 20px 0; /* Adjust vertical spacing between videos */
-    width: 48%; /* Two videos per row with some space in between */
+    width: 49%; /* Slightly increase the width to fit better */
     position: relative; /* Relative positioning for iframe */
 }
 
