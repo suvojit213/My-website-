@@ -89,6 +89,23 @@ main {
     height: 280px; /* Increased height for better visibility */
 }
 
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1d1d1d;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
