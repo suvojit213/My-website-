@@ -36,9 +36,7 @@ header h1 {
 nav {
     background-color: #1d1d1d;
     padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
 .nav-link {
@@ -79,6 +77,7 @@ main {
     display: flex;
     flex-direction: column; /* Display videos in a column layout */
     align-items: center; /* Center align videos horizontally */
+    overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 .video {
