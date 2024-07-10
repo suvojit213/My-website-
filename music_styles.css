@@ -77,14 +77,14 @@ main {
 
 .video-container {
     display: flex;
-    flex-wrap: wrap; /* Allow videos to wrap to the next line */
-    justify-content: center; /* Center videos horizontally */
+    flex-direction: column; /* Display videos in a column layout */
+    align-items: center; /* Center align videos horizontally */
 }
 
 .video {
-    margin: 20px;
-    flex: 0 0 calc(33.33% - 40px); /* Adjust video width for responsive columns */
-    max-width: calc(33.33% - 40px); /* Ensure videos don't exceed their container */
+    margin: 20px 0; /* Adjust vertical spacing between videos */
+    width: 100%; /* Ensure videos fill the container width */
+    max-width: 560px; /* Limit maximum width of videos */
     position: relative; /* Relative positioning for iframe */
 }
 
@@ -92,11 +92,4 @@ main {
     width: 100%; /* Ensure iframe fills its container */
     height: auto; /* Allow iframe height to adjust based on width */
     min-height: 250px; /* Minimum height for visibility */
-}
-
-@media (max-width: 768px) {
-    .video {
-        flex: 0 0 calc(50% - 40px); /* Adjust video width for smaller screens */
-        max-width: calc(50% - 40px); /* Ensure videos don't exceed their container */
-    }
 }
