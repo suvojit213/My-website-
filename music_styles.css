@@ -80,8 +80,8 @@ main {
 
 .video {
     margin: 15px;
-    flex: 1 1 calc(50% - 30px); /* Adjust width for two videos per row on desktop */
-    max-width: calc(50% - 30px); /* Limit video width for better spacing */
+    flex: 1 1 calc(33.33% - 30px); /* Adjust width for three videos per row on desktop */
+    max-width: calc(33.33% - 30px); /* Limit video width for better spacing */
 }
 
 .video iframe {
