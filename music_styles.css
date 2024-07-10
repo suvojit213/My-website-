@@ -80,6 +80,8 @@ main {
 
 .video {
     margin: 15px;
+    flex: 1 1 45%; /* Ensure proper spacing between videos on mobile */
+    max-width: 45%; /* Limit video width on mobile */
 }
 
 @media (max-width: 768px) {
@@ -104,12 +106,12 @@ main {
         padding: 10px 20px;
     }
 
-    .video-container {
-        flex-direction: column;
+    .section h2 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
     }
 
     .video {
-        width: 100%;
-        max-width: 560px;
+        flex: 1 1 100%; /* Full width for videos on smaller screens */
+        max-width: 100%;
     }
 }
