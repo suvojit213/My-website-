@@ -98,7 +98,7 @@ footer {
     padding: 10px 0;
     background-color: #1d1d1d;
     color: #ffffff;
-    position: absolute; /* Absolute positioning to stick to bottom */
+    position: fixed; /* Fixed positioning to stick to bottom */
     bottom: 0;
     width: 100%;
 }
