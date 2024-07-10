@@ -77,16 +77,14 @@ main {
 
 .video-container {
     display: flex;
-    flex-wrap: nowrap; /* Ensure videos stay in one line */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    flex-wrap: wrap; /* Allow videos to wrap to the next line */
+    justify-content: center; /* Center videos horizontally */
 }
 
 .video {
-    margin: 0 10px; /* Adjust margin for space between videos */
-    flex: 0 0 auto; /* Allow videos to shrink and grow */
-    width: 80%; /* Limit width to 80% of container */
-    max-width: 100%; /* Ensure videos don't exceed their container */
+    margin: 20px;
+    flex: 0 0 calc(33.33% - 40px); /* Adjust video width for responsive columns */
+    max-width: calc(33.33% - 40px); /* Ensure videos don't exceed their container */
     position: relative; /* Relative positioning for iframe */
 }
 
@@ -94,4 +92,11 @@ main {
     width: 100%; /* Ensure iframe fills its container */
     height: auto; /* Allow iframe height to adjust based on width */
     min-height: 250px; /* Minimum height for visibility */
+}
+
+@media (max-width: 768px) {
+    .video {
+        flex: 0 0 calc(50% - 40px); /* Adjust video width for smaller screens */
+        max-width: calc(50% - 40px); /* Ensure videos don't exceed their container */
+    }
 }
