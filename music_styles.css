@@ -86,7 +86,7 @@ main {
 
 .video iframe {
     width: 100%; /* Ensure videos fill their container */
-    height: 180px; /* Fixed height for better fit on mobile */
+    height: 280px; /* Increased height for better visibility */
 }
 
 @media (max-width: 768px) {
@@ -116,12 +116,12 @@ main {
     }
 
     .video {
-        flex: 1 1 48%; /* Adjusted width for slightly larger videos per row on mobile */
-        max-width: 48%;
-        margin: 15px 1%; /* Adjust margin for better spacing */
+        flex: 1 1 100%; /* Full width for videos on mobile */
+        max-width: 100%;
+        margin: 15px 0; /* Adjust margin for better spacing */
     }
 
     .video iframe {
-        height: 160px; /* Adjusted height for better fit on mobile */
+        height: 220px; /* Increased height for better fit on mobile */
     }
 }
