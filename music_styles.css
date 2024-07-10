@@ -11,15 +11,12 @@ body {
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
-    margin: 0; /* Ensure no default margins */
-    padding: 0; /* Ensure no default padding */
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 60px; /* Space for footer */
-    position: relative; /* Relative positioning for footer placement */
+    padding: 20px 0;
 }
 
 header {
@@ -41,20 +38,20 @@ nav {
     flex-wrap: wrap;
 }
 
-.nav-link {
+nav a {
     color: #ffffff;
     text-decoration: none;
     margin: 10px;
+    font-size: 1.2em;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-weight: bold;
-    display: inline-block;
 }
 
-.nav-link:hover {
+nav a:hover {
     background-color: #555;
     transform: scale(1.05);
 }
@@ -72,36 +69,59 @@ main {
     font-size: 2em;
     border-bottom: 2px solid #f04e23;
     padding-bottom: 10px;
-    text-align: center;
+    text-align: center; /* Center the section header */
 }
 
 .video-container {
     display: flex;
-    flex-wrap: nowrap; /* Ensure videos stay in one line */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    flex-wrap: wrap;
+    justify-content: center; /* Center the video elements */
 }
 
 .video {
-    margin: 0 10px; /* Adjust margin for space between videos */
-    flex: 0 0 auto; /* Allow videos to shrink and grow */
-    width: 80%; /* Limit width to 80% of container */
-    max-width: 100%; /* Ensure videos don't exceed their container */
-    position: relative; /* Relative positioning for iframe */
+    margin: 15px;
+    flex: 1 1 calc(33.33% - 30px); /* Adjust width for three videos per row on desktop */
+    max-width: calc(33.33% - 30px); /* Limit video width for better spacing */
 }
 
 .video iframe {
-    width: 100%; /* Ensure iframe fills its container */
-    height: auto; /* Allow iframe height to adjust based on width */
-    min-height: 250px; /* Minimum height for visibility */
+    width: 100%; /* Ensure videos fill their container */
+    height: 280px; /* Increased height for better visibility */
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #1d1d1d;
-    color: #ffffff;
-    position: fixed; /* Fixed positioning to stick to bottom */
-    bottom: 0;
-    width: 100%;
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .section h2 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    .video {
+        flex: 1 1 100%; /* Full width for videos on mobile */
+        max-width: 100%;
+        margin: 15px 0; /* Adjust margin for better spacing */
+    }
+
+    .video iframe {
+        height: 220px; /* Increased height for better fit on mobile */
+    }
 }
