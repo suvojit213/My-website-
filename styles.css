@@ -95,8 +95,8 @@ main {
 }
 
 .about-me-photo img {
-    width: 100%; /* Ensure the image fills its container */
-    max-width: 200px; /* Prevent image overflow */
+    width: 200px; /* Ensure the image has a fixed width */
+    height: 200px; /* Ensure the image has a fixed height */
     border-radius: 50%; /* Makes the image round */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
 }
@@ -132,5 +132,6 @@ main {
 
     .about-me-photo img {
         max-width: 80%;
+        height: auto; /* Ensure aspect ratio is maintained on smaller screens */
     }
 }
