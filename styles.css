@@ -56,7 +56,6 @@ nav {
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-weight: bold;
-    cursor: pointer;
 }
 
 .nav-link:hover {
@@ -84,12 +83,16 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
 .about-me-photo {
     flex: 0 0 200px; /* Fixed width for photo container */
-    margin: 20px 0 0 0; /* Adjusted margin */
+    margin: 20px; /* Add margin to adjust the position */
+    position: relative;
+    top: 20px; /* Move the image down */
+    right: 20px; /* Move the image to the right */
 }
 
 .about-me-photo img {
@@ -101,6 +104,7 @@ main {
 
 .about-me-text {
     flex: 1; /* Take remaining width */
+    text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -124,9 +128,15 @@ main {
 
     .about-me-photo {
         margin-bottom: 20px;
+        top: 0; /* Reset top position for mobile */
+        right: 0; /* Reset right position for mobile */
     }
 
     .about-me-photo img {
         max-width: 80%;
+    }
+
+    .about-me-text {
+        text-align: center;
     }
 }
